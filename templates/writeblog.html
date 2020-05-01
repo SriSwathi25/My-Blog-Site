@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block subcontent %}
+
+<div class="signup-form" > 
+    <div class="text-center">
+        <h1>Write a new Blog</h1>
+    </div>   
+    <form  method="post">
+        <div class="form-group">
+            <h1>Title</h5><br/>
+            <div class="col-sm-5">
+            <input type="text" class="form-control" name="title" placeholder="Title" required="required"/>
+        </div>
+        </div>
+        <br/>
+
+        <div class="form-group" style="min-width: 400px;">
+            <h1>Body</h5><br/>
+            <div class="col-sm-5">
+            <textarea name="body" class="ckeditor"  placeholder="Content goes here..." required="required"></textarea>
+            <br/>
+        </div>
+        </div>
+        <br/>
+        
+        <div class="form-group">
+            <div class="col-sm-5">
+            <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
+        </div>
+    </div>
+    </form>
+</div>
+{% endblock %}

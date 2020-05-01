@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block subcontent %}
+<div class="signup-form" > 
+  {% if my_blogs %}
+    <table cellpadding="5" >
+    {% for my_blog in my_blogs %}
+      <tr>
+        <td style="padding:0 15px;"> <h3> <a style="color:darkblue;"href="/blogs/{{ my_blog['BID'] }}">{{my_blog['TITLE']}} </a> </h3></td>
+        <td style="padding:0 15px;"> <a href="/edit-blog/{{ my_blog['BID'] }}" class="btn btn-primary">Edit</a></td>
+        <td style="padding:0 15px;"> <a href="/delete-blog/{{ my_blog['BID'] }}" class="btn btn-danger">Delete</a></td>
+      </tr>
+    {% endfor %}
+    </table> 
+  {% else %}
+    <h3>No blogs have been written by you</h3>
+  {% endif %}
+  </div>
+{% endblock %}

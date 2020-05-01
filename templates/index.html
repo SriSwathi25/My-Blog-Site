@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block subcontent %}
+{% if blogs %}
+{% for blog in blogs %}
+<h3><a style="color:brown;" href="/blogs/{{ blog['BID'] }}">{{ blog['TITLE'] }}</a></h3>
+<h5>Written by {{blog['AUTHOR'] }}</h5>
+<hr>
+{% endfor %}
+{% else %}
+<h3>No blogs have been written yet.</h3>
+{% endif %}
+{% endblock %}
